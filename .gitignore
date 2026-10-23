@@ -1,5 +1,4 @@
 node_modules/
-assets/box-video.mp4
 .env
 .env.*
 .DS_Store

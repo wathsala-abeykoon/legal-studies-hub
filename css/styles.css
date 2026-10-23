@@ -1192,7 +1192,7 @@ h2.display {
   background: var(--white);
   border-radius: 14px;
   border: 1px solid var(--line);
-  padding: 2.25rem 2.25rem 0;
+  padding: 0;
   max-width: 980px;
   margin: 0 auto;
   transform-origin: top center;
@@ -1200,8 +1200,13 @@ h2.display {
   box-shadow: var(--shadow-sm);
   cursor: grab;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: block;
+}
+
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .poster-frame.is-grabbing .poster {
@@ -2260,11 +2265,19 @@ h2.display {
   }
 
   .poster {
-    width: 980px !important;
+    width: 100% !important;
     max-width: none !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .poster img {
+    width: 100% !important;
+    height: auto !important;
   }
 }
